@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.6 on win32)" generated="20200831 16:50:54.409" rpa="false">
+<suite id="s1" name="添加老师" source="E:\songqin\rf\rf工具学习\tc\添加老师.robot">
+<test id="s1-t1" name="用例">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>{"name": "初中化学", "desc": "初中化学课程", "display_idx": "1"}</arg>
+</arguments>
+<assign>
+<var>${inData}</var>
+</assign>
+<msg timestamp="20200831 16:50:54.511" level="INFO">${inData} = {"name": "初中化学", "desc": "初中化学课程", "display_idx": "1"}</msg>
+<status status="PASS" starttime="20200831 16:50:54.511" endtime="20200831 16:50:54.511"></status>
+</kw>
+<kw name="Add Course" library="pylib.teacher">
+<arguments>
+<arg>${inData}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 16:50:54.512" endtime="20200831 16:50:54.528"></status>
+</kw>
+<kw name="List Course" library="pylib.teacher">
+<assign>
+<var>${inId}</var>
+<var>${inName}</var>
+</assign>
+<msg timestamp="20200831 16:50:54.535" level="INFO">${inId} = 3405</msg>
+<msg timestamp="20200831 16:50:54.535" level="INFO">${inName} = 初中化学</msg>
+<status status="PASS" starttime="20200831 16:50:54.528" endtime="20200831 16:50:54.535"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>{"username": "zhangsan","password": "123456","realname": "张三","desc": "张三老师","courses": [{"id": ${inId}, "name": "${inName}"}],"display_idx": 1}</arg>
+</arguments>
+<assign>
+<var>${inData2}</var>
+</assign>
+<msg timestamp="20200831 16:50:54.536" level="INFO">${inData2} = {"username": "zhangsan","password": "123456","realname": "张三","desc": "张三老师","courses": [{"id": 3405, "name": "初中化学"}],"display_idx": 1}</msg>
+<status status="PASS" starttime="20200831 16:50:54.535" endtime="20200831 16:50:54.536"></status>
+</kw>
+<kw name="Add Teacher" library="pylib.teacher">
+<arguments>
+<arg>${inData2}</arg>
+</arguments>
+<assign>
+<var>${teacherId}</var>
+</assign>
+<msg timestamp="20200831 16:50:54.611" level="INFO">${teacherId} = 288</msg>
+<status status="PASS" starttime="20200831 16:50:54.536" endtime="20200831 16:50:54.611"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${teacherId}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 16:50:54.611" endtime="20200831 16:50:54.612"></status>
+</kw>
+<kw name="List Teacher" library="pylib.teacher">
+<assign>
+<var>${teachlist}</var>
+</assign>
+<msg timestamp="20200831 16:50:54.620" level="INFO">${teachlist} = {"retcode": 0, "retlist": [{"id": 288, "realname": "张三", "desc": "张三老师", "display_idx": 1, "username": "zhangsan", "courses": [{"course_id": 3405}]}], "total": 1}</msg>
+<status status="PASS" starttime="20200831 16:50:54.612" endtime="20200831 16:50:54.620"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${teachlist}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 16:50:54.620" endtime="20200831 16:50:54.620"></status>
+</kw>
+<kw name="Delete Teacher" library="pylib.teacher">
+<arguments>
+<arg>${teacherId}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 16:50:54.620" endtime="20200831 16:50:54.637"></status>
+</kw>
+<kw name="Delete Course" library="pylib.teacher">
+<arguments>
+<arg>${inId}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 16:50:54.637" endtime="20200831 16:50:54.651"></status>
+</kw>
+<status status="PASS" starttime="20200831 16:50:54.510" endtime="20200831 16:50:54.651" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200831 16:50:54.413" endtime="20200831 16:50:54.651"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="添加老师">添加老师</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

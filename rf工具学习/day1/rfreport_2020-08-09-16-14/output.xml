@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.6 on win32)" generated="20200809 16:14:46.600" rpa="false">
+<suite id="s1" name="回归测试" source="E:\songqin\rf\rf工具学习\day1\bigsuite">
+<suite id="s1-s1" name="First" source="E:\songqin\rf\rf工具学习\day1\bigsuite\first.robot">
+<test id="s1-s1-t1" name="用例1">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>hello robot1</arg>
+</arguments>
+<status status="PASS" starttime="20200809 16:14:46.638" endtime="20200809 16:14:46.638"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>hello robot2</arg>
+</arguments>
+<status status="PASS" starttime="20200809 16:14:46.638" endtime="20200809 16:14:46.639"></status>
+</kw>
+<status status="PASS" starttime="20200809 16:14:46.637" endtime="20200809 16:14:46.639" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="用例2">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行用例2</arg>
+</arguments>
+<status status="PASS" starttime="20200809 16:14:46.640" endtime="20200809 16:14:46.640"></status>
+</kw>
+<status status="PASS" starttime="20200809 16:14:46.639" endtime="20200809 16:14:46.640" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200809 16:14:46.633" endtime="20200809 16:14:46.641"></status>
+</suite>
+<status status="PASS" starttime="20200809 16:14:46.603" endtime="20200809 16:14:46.642"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="回归测试">回归测试</stat>
+<stat pass="2" fail="0" id="s1-s1" name="First">回归测试.First</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

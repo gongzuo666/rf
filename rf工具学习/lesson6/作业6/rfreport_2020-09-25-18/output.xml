@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.6 on win32)" generated="20200925 18:03:50.516" rpa="false">
+<suite id="s1" name="Tc" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc">
+<suite id="s1-s1" name="webUI测试" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试">
+<kw name="Setup Web Test" library="pylib.WebOpAdmin" type="setup">
+<status status="PASS" starttime="20200925 18:03:50.625" endtime="20200925 18:03:53.538"></status>
+</kw>
+<suite id="s1-s1-s1" name="管理员登录" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录">
+<kw name="Login Web Site" library="pylib.WebOpAdmin" type="setup">
+<status status="PASS" starttime="20200925 18:03:53.552" endtime="20200925 18:03:55.853"></status>
+</kw>
+<suite id="s1-s1-s1-s1" name="培训班期管理" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\培训班期管理">
+<suite id="s1-s1-s1-s1-s1" name="添加培训班期" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\培训班期管理\添加培训班期.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="添加培训班">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>DeleteAll</arg>
+<arg>traininggrade</arg>
+<arg>AND</arg>
+<arg>DeleteAll</arg>
+<arg>Training</arg>
+<arg>AND</arg>
+<arg>AddTraining</arg>
+<arg>初中班</arg>
+<arg>初中班级</arg>
+<arg>1</arg>
+<arg>初中语文</arg>
+</arguments>
+<kw name="Delete All" library="pylib.WebOpAdmin">
+<arguments>
+<arg>traininggrade</arg>
+</arguments>
+<msg timestamp="20200925 18:04:05.924" level="FAIL">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref="traininggrade"]"}
+  (Session info: chrome=84.0.4147.135)
+</msg>
+<status status="FAIL" starttime="20200925 18:03:55.864" endtime="20200925 18:04:05.924"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:03:55.864" endtime="20200925 18:04:05.924"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:03:55.862" endtime="20200925 18:04:05.925" critical="yes">Setup failed:
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref="traininggrade"]"}
+  (Session info: chrome=84.0.4147.135)
+</status>
+</test>
+<status status="FAIL" starttime="20200925 18:03:55.858" endtime="20200925 18:04:05.926"></status>
+</suite>
+<status status="FAIL" starttime="20200925 18:03:55.853" endtime="20200925 18:04:05.931"></status>
+</suite>
+<suite id="s1-s1-s1-s2" name="培训班管理" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\培训班管理">
+<suite id="s1-s1-s1-s2-s1" name="添加培训班" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\培训班管理\添加培训班.robot">
+<test id="s1-s1-s1-s2-s1-t1" name="添加培训班">
+<status status="FAIL" starttime="20200925 18:04:05.947" endtime="20200925 18:04:05.948" critical="yes">Test case contains no keywords.</status>
+</test>
+<test id="s1-s1-s1-s2-s1-t2" name="[Setup]">
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>DeleteAll</arg>
+<arg>Training</arg>
+<arg>AND</arg>
+<arg>DeleteAll</arg>
+<arg>course</arg>
+<arg>AND</arg>
+<arg>AddCourse</arg>
+<arg>初中语文</arg>
+<arg>语文课</arg>
+<arg>2</arg>
+<arg>AND</arg>
+<arg>AddCourse</arg>
+<arg>初中数学</arg>
+<arg>数学课</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Delete All" library="pylib.WebOpAdmin">
+<arguments>
+<arg>Training</arg>
+</arguments>
+<msg timestamp="20200925 18:04:15.971" level="FAIL">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref="training"]"}
+  (Session info: chrome=84.0.4147.135)
+</msg>
+<status status="FAIL" starttime="20200925 18:04:05.949" endtime="20200925 18:04:15.971"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:04:05.948" endtime="20200925 18:04:15.972"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:04:05.948" endtime="20200925 18:04:15.972" critical="yes">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref="training"]"}
+  (Session info: chrome=84.0.4147.135)
+</status>
+</test>
+<status status="FAIL" starttime="20200925 18:04:05.942" endtime="20200925 18:04:15.973"></status>
+</suite>
+<status status="FAIL" starttime="20200925 18:04:05.935" endtime="20200925 18:04:15.978"></status>
+</suite>
+<suite id="s1-s1-s1-s3" name="老师管理" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\老师管理">
+<suite id="s1-s1-s1-s3-s1" name="添加老师" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\老师管理\添加老师.robot">
+<test id="s1-s1-s1-s3-s1-t1" name="添加老师">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>DeleteAll</arg>
+<arg>teacher</arg>
+<arg>AND</arg>
+<arg>DeleteAll</arg>
+<arg>course</arg>
+<arg>AND</arg>
+<arg>addCourse</arg>
+<arg>初中语文</arg>
+<arg>语文课</arg>
+<arg>2</arg>
+<arg>AND</arg>
+<arg>addCourse</arg>
+<arg>初中数学</arg>
+<arg>数学课</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Delete All" library="pylib.WebOpAdmin">
+<arguments>
+<arg>teacher</arg>
+</arguments>
+<msg timestamp="20200925 18:04:26.008" level="FAIL">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref=teacher]"}
+  (Session info: chrome=84.0.4147.135)
+</msg>
+<status status="FAIL" starttime="20200925 18:04:15.997" endtime="20200925 18:04:26.009"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:04:15.997" endtime="20200925 18:04:26.009"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:04:15.996" endtime="20200925 18:04:26.009" critical="yes">Setup failed:
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref=teacher]"}
+  (Session info: chrome=84.0.4147.135)
+</status>
+</test>
+<status status="FAIL" starttime="20200925 18:04:15.989" endtime="20200925 18:04:26.011"></status>
+</suite>
+<status status="FAIL" starttime="20200925 18:04:15.982" endtime="20200925 18:04:26.017"></status>
+</suite>
+<suite id="s1-s1-s1-s4" name="课程管理" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\课程管理">
+<suite id="s1-s1-s1-s4-s1" name="添加课程" source="E:\songqin\rf\rf工具学习\lesson6\作业6\tc\webUI测试\管理员登录\课程管理\添加课程.robot">
+<test id="s1-s1-s1-s4-s1-t1" name="添加课程1">
+<kw name="Delete All" library="pylib.WebOpAdmin" type="setup">
+<arguments>
+<arg>course</arg>
+</arguments>
+<msg timestamp="20200925 18:04:36.062" level="FAIL">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref=course]"}
+  (Session info: chrome=84.0.4147.135)
+</msg>
+<status status="FAIL" starttime="20200925 18:04:26.043" endtime="20200925 18:04:36.063"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:04:26.041" endtime="20200925 18:04:36.064" critical="yes">Setup failed:
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"ul.nav a[ui-sref=course]"}
+  (Session info: chrome=84.0.4147.135)
+</status>
+</test>
+<status status="FAIL" starttime="20200925 18:04:26.030" endtime="20200925 18:04:36.065"></status>
+</suite>
+<status status="FAIL" starttime="20200925 18:04:26.022" endtime="20200925 18:04:36.071"></status>
+</suite>
+<status status="FAIL" starttime="20200925 18:03:53.538" endtime="20200925 18:04:36.077"></status>
+</suite>
+<kw name="Tear Down Web Test" library="pylib.WebOpAdmin" type="teardown">
+<status status="PASS" starttime="20200925 18:04:36.083" endtime="20200925 18:04:38.478"></status>
+</kw>
+<status status="FAIL" starttime="20200925 18:03:50.545" endtime="20200925 18:04:38.478"></status>
+</suite>
+<status status="FAIL" starttime="20200925 18:03:50.522" endtime="20200925 18:04:38.486"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5">Critical Tests</stat>
+<stat pass="0" fail="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="5" id="s1" name="Tc">Tc</stat>
+<stat pass="0" fail="5" id="s1-s1" name="webUI测试">Tc.webUI测试</stat>
+<stat pass="0" fail="5" id="s1-s1-s1" name="管理员登录">Tc.webUI测试.管理员登录</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s1" name="培训班期管理">Tc.webUI测试.管理员登录.培训班期管理</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s1-s1" name="添加培训班期">Tc.webUI测试.管理员登录.培训班期管理.添加培训班期</stat>
+<stat pass="0" fail="2" id="s1-s1-s1-s2" name="培训班管理">Tc.webUI测试.管理员登录.培训班管理</stat>
+<stat pass="0" fail="2" id="s1-s1-s1-s2-s1" name="添加培训班">Tc.webUI测试.管理员登录.培训班管理.添加培训班</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s3" name="老师管理">Tc.webUI测试.管理员登录.老师管理</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s3-s1" name="添加老师">Tc.webUI测试.管理员登录.老师管理.添加老师</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s4" name="课程管理">Tc.webUI测试.管理员登录.课程管理</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s4-s1" name="添加课程">Tc.webUI测试.管理员登录.课程管理.添加课程</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

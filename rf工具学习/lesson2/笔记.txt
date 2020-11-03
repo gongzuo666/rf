@@ -1,0 +1,45 @@
+RF自动化的核心就是关键字
+
+如何查看关键字信息？
+1.查看源码
+2.查看关键字文档
+官方文档
+https://robotframework.org/
+http://robotframework.org/robotframework/latest/libraries/BuiltIn.html
+https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
+
+RF传参
+字面量---传进去的都是unicode编码的字符串
+
+eval(python语法的字符串)--->执行字符串表达式
+
+在rf python表达式的参数中如果引用了RF变量，可以用$var1形式进行传参
+若关键字是普通的参数，传参使用传统的方式
+注意表达式空格
+
+字符串包含多个空格的临时解决方法
+从第二个空格处前面用反斜杠\修饰（一个反斜杠只能修饰一个空格）
+
+如果遇到这种情况，可以用Python来处理
+
+
+关键字使用
+如果关键字定义的源码函数有下划线连接，下划线可以省略或者用空格代替
+
+使用自定义库报错
+Importing test library 't1' failed: ModuleNotFoundError: No module named 't1
+解决：通过指定Pythonpath
+robot --pythonpath  .  t1.robot
+robot -P  .  t1.robot
+
+
+传参的形式
+scalar ---整体传参
+List  ---将元素展开，作为多个参数进行传参（解包）
+Dict  ---将键值对展开，作为多个参数进行传参
+
+FOR循环
+range---注意IN RANGE的空格，不要超过一个
+IN RANGE   开始   结束   步长
+IN RANGE   循环次数
+
